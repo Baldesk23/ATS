@@ -1,0 +1,42 @@
+El proyecto es un sistema web llamado “Filtro ATS”, hecho en React + TypeScript.
+Quiero que hagas las siguientes mejoras y correcciones en el archivo src/App.tsx y firebaseConfig.ts:
+
+1️⃣ Vista de usuario:
+   - Mantener el logo de San Roque (escudo.png) arriba, centrado y con su diseño actual.
+   - El cuadro de “Sube tu CV” debe quedar centrado y con bordes suaves.
+   - Al subir un archivo, se muestra una vista previa y el mensaje “¡CV enviado correctamente!” si se sube bien a Firebase Storage.
+   - Los archivos se guardan en Firebase Storage y la metadata (nombre, url, fecha) en Firestore.
+
+2️⃣ Vista de moderador:
+   - El acceso se realiza al presionar el ícono “?” e ingresar la contraseña “Sanro”.
+   - Una vez dentro, mostrar dos pestañas:
+        a) “CVs Subidos” → tarjetas con nombre, fecha, y tres botones:
+            - “Ver” → abre el CV desde Firebase Storage.
+            - “Descargar” → descarga el CV directamente.
+            - “Eliminar” → lo borra de Firestore y Storage.
+        b) “Ofertas Laborales” → campo para publicar ofertas, tarjetas de ofertas publicadas, y botón “Eliminar”.
+   - Todo sincronizado en tiempo real usando onSnapshot de Firestore.
+
+3️⃣ Estilo:
+   - Mantener los mismos colores suaves (gris claro y azul elegante).
+   - Alinear todos los contenedores y botones correctamente al centro.
+   - Agregar animaciones suaves con framer-motion en las tarjetas.
+
+4️⃣ Verificar:
+   - Que las importaciones desde firebaseConfig.ts estén correctas.
+   - Que el acceso de moderador funcione bien.
+   - Que los botones Ver, Descargar y Eliminar funcionen sin errores.
+
+Usar este firebaseConfig:
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAYQj3_zSjBnC74PREQBv6rEShr2QVrWHQ",
+  authDomain: "ats-filtro.firebaseapp.com",
+  projectId: "ats-filtro",
+  storageBucket: "ats-filtro.firebasestorage.app",
+  messagingSenderId: "117884251795",
+  appId: "1:117884251795:web:3067c411d82937aa386766",
+  measurementId: "G-ME1Z6E0LQP"
+};
+
+Asegúrate de que todo quede funcionando correctamente, con el diseño original centrado, las dos pestañas activas y el botón de “Descargar CV” agregado.
